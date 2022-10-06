@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\publicacionesController;
 use App\Http\Controllers\publicacionesControllers;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[publicacionesController::class,'index'])->name('index');
