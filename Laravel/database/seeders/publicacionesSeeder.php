@@ -22,6 +22,7 @@ class publicacionesSeeder extends Seeder
             $publicacion->userId = $value->userId;
             $publicacion->title = $value->title;
             $publicacion->body = $value->body;
+            $publicacion->description = ($value->id%2 == 0 ) ? 'Par': 'Impar';
             $publicacion->save();
         }
 
